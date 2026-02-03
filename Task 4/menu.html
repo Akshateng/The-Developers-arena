@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕Coffee House | Menu</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="menu.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Mobile Menu Toggle -->
+<div class="mobile-menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<header>
+    <h1 class="logo">Coffee<span>.</span></h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="menu">
+    <h2 class="fade-in">Our Menu</h2>
+    
+    <!-- Filter Buttons -->
+    <div class="menu-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="hot">Hot Coffee</button>
+        <button class="filter-btn" data-category="cold">Cold Drinks</button>
+        <button class="filter-btn" data-category="specialty">Specialty</button>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-box slide-up" data-category="hot">
+            <div class="menu-image">
+                <img src="images/Espresso.jpg" alt="">
+            </div>
+            <h3>Espresso</h3>
+            <p>Strong & bold coffee shot</p>
+            <span class="price">₹120</span>
+            <button class="add-to-cart" data-item="Espresso" data-price="120">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="hot">
+            <div class="menu-image">
+                <img src="images/Cappuccino.jpg" alt="">
+            </div>
+            <h3>Cappuccino</h3>
+            <p>Espresso with steamed milk foam</p>
+            <span class="price">₹150</span>
+            <button class="add-to-cart" data-item="Cappuccino" data-price="150">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="hot">
+            <div class="menu-image">
+                <img src="images/Latte.jpg" alt="">
+            </div>
+            <h3>Latte</h3>
+            <p>Smooth & creamy milk coffee</p>
+            <span class="price">₹170</span>
+            <button class="add-to-cart" data-item="Latte" data-price="170">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="hot">
+            <div class="menu-image">
+                <img src="images/Mocha.jpg" alt="">
+            </div>
+            <h3>Mocha</h3>
+            <p>Chocolate espresso delight</p>
+            <span class="price">₹180</span>
+            <button class="add-to-cart" data-item="Mocha" data-price="180">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="cold">
+            <div class="menu-image">
+                <img src="images/Iced Coffee.jpg" alt="">
+            </div>
+            <h3>Iced Coffee</h3>
+            <p>Chilled coffee perfection</p>
+            <span class="price">₹160</span>
+            <button class="add-to-cart" data-item="Iced Coffee" data-price="160">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="cold">
+            <div class="menu-image">
+                <img src="images/cold brew.jpg" alt="">
+            </div>
+            <h3>Cold Brew</h3>
+            <p>Smooth cold-steeped coffee</p>
+            <span class="price">₹190</span>
+            <button class="add-to-cart" data-item="Cold Brew" data-price="190">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="specialty">
+            <div class="menu-image">
+                <img src="images/Affogato.jpg" alt="">
+            </div>
+            <h3>Affogato</h3>
+            <p>Espresso over vanilla ice cream</p>
+            <span class="price">₹200</span>
+            <button class="add-to-cart" data-item="Affogato" data-price="200">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="specialty">
+            <div class="menu-image">
+                <img src="images/Matcha Latte.jpg" alt="">
+            </div>
+            <h3>Matcha Latte</h3>
+            <p>Premium green tea latte</p>
+            <span class="price">₹180</span>
+            <button class="add-to-cart" data-item="Matcha Latte" data-price="180">Add to Cart</button>
+        </div>
+
+        <div class="menu-box slide-up" data-category="hot">
+            <div class="menu-image">
+                <img src="images/americano.jpg" alt="">
+            </div>
+            <h3>Americano</h3>
+            <p>Espresso with hot water</p>
+            <span class="price">₹130</span>
+            <button class="add-to-cart" data-item="Americano" data-price="130">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+        <span class="close-cart">&times;</span>
+        <h2>Your Cart</h2>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-total">
+            <strong>Total: ₹<span id="cartTotal">0</span></strong>
+        </div>
+        <button class="btn checkout-btn">Checkout</button>
+    </div>
+</div>
+
+<!-- Floating Cart Button -->
+<button class="floating-cart" id="floatingCart">
+    🛒 <span class="cart-count">0</span>
+</button>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Coffee House</h3>
+            <p>Brewing happiness since 2016</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h4>Hours</h4>
+            <p>Mon-Fri: 7am - 8pm</p>
+            <p>Sat-Sun: 8am - 9pm</p>
+        </div>
+    </div>
+    <p class="copyright">© 2026 Coffee House. All rights reserved.</p>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop">↑</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
