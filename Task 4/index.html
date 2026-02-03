@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕Coffee House | Home</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header>
+        <h1 class="logo">Coffee<span>.</span></h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h2>Fresh Coffee, Fresh Day <span class="coffee-emoji">☕</span></h2>
+            <p>Start your morning with the perfect cup of coffee.</p>
+            <a href="menu.html" class="btn">View Menu</a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-content slide-up">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Organic Beans</h3>
+                    <p>We source only the finest organic coffee beans from sustainable farms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Expert Baristas</h3>
+                    <p>Our skilled baristas craft each cup with precision and passion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for excellence in coffee quality and customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number" data-target="5000">0</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Coffee Varieties</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100">0</span>
+                <span class="stat-label">Daily Cups</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-card active">
+                    <p class="testimonial-text">"The best coffee in town! The atmosphere is cozy and the staff is
+                        incredibly friendly."</p>
+                    <p class="testimonial-author">- Priya Sharma</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I come here every morning. Their cappuccino is absolutely perfect!"</p>
+                    <p class="testimonial-author">- Rahul Patel</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Amazing quality and great prices. This is my go-to coffee spot."</p>
+                    <p class="testimonial-author">- Anjali Desai</p>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Connected</h2>
+            <p>Subscribe to get special offers and updates</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <div class="newsletter-message"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Coffee House</h3>
+                <p>Brewing happiness since 2016</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <p>Mon-Fri: 7am - 8pm</p>
+                <p>Sat-Sun: 8am - 9pm</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Coffee House. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
