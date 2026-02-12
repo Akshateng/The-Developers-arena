@@ -1,0 +1,133 @@
+/* ========================================
+   SECTIONS
+   ======================================== */
+section {
+    position: relative;
+    padding: var(--section-padding);
+}
+
+#about {
+    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-bg-alt) 100%);
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--primary-color) 50%, transparent 100%);
+    opacity: 0.5;
+}
+
+#skills {
+    background: linear-gradient(180deg, var(--dark-bg-alt) 0%, var(--dark-bg) 100%);
+}
+
+#projects {
+    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-bg-alt) 100%);
+}
+
+#contact {
+    background: linear-gradient(145deg, #0e0e1f 0%, #200f3a 100%);
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 72% 28%, rgba(124, 106, 255, 0.08) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+/* ========================================
+   HOME SECTION
+   ======================================== */
+.home-section {
+    height: 100vh;
+    background: linear-gradient(145deg, #0d0d1f 0%, #200f3a 50%, #0d0d1f 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated aurora orbs */
+.home-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 55% 45% at 18% 55%, rgba(124, 106, 255, 0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 55% at 82% 75%, rgba(196, 77, 255, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 35% 35% at 50% 20%, rgba(100, 200, 255, 0.05) 0%, transparent 50%);
+    animation: auroraShift 18s ease-in-out infinite;
+}
+
+/* Decorative grid lines */
+.home-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(124, 106, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 106, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, transparent 30%, black 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, transparent 30%, black 80%);
+    pointer-events: none;
+}
+
+.home-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.home-section h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+}
+
+.home-section h1 span {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+.home-section p {
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .theme-toggle,
+    .scroll-to-top {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    .section-title::after {
+        width: 55px;
+    }
+
+    body {
+        background-attachment: scroll; /* avoid mobile perf issues */
+    }
+}
